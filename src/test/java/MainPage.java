@@ -14,6 +14,7 @@ public class MainPage {
     public void clickOnSearchField() {
         searchField.shouldBe(Condition.enabled).click();
         searchField.setValue(SEARCH_STRING).pressEnter();
+
     }
 
     public void openWebSite(String url) {

@@ -17,9 +17,10 @@ abstract public class BaseTest {
         Configuration.headless = false;//отображение прогона тестов в консоли
 
     }
+
     @Before
     public void init() {
-     SetUp();//вызвали метод
+        SetUp();//вызвали метод
     }
 
     @After

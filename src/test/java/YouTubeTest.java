@@ -10,5 +10,6 @@ public class YouTubeTest extends BaseTest {
         MainPage mainPage = new MainPage();
         mainPage.openWebSite(BASE_URL);
         mainPage.clickOnSearchField();
+        int i = 44;
     }
 }
