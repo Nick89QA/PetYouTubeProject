@@ -14,7 +14,7 @@ abstract public class BaseTest {
         Configuration.browser = "chrome";//браузер хром
         Configuration.driverManagerEnabled = true;//подтверждение для драйвер менеджера
         Configuration.browserSize = "1500x1900";//указываем размер окна
-        Configuration.headless = true;//отображение прогона тестов в консоли
+        Configuration.headless = false;//отображение прогона тестов в консоли
 
     }
 
