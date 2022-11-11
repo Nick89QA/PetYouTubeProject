@@ -2,7 +2,6 @@ import org.junit.Test;
 
 public class YouTubeTest extends BaseTest {
 
-    private final static String BASE_URL = "https://www.youtube.com/";
 
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
@@ -11,15 +10,15 @@ public class YouTubeTest extends BaseTest {
 
     @Test
     public void searchSerialAndGoToPageWithSerial() {
-        mainPage.openWebSite(BASE_URL);
+        mainPage.openWebSite(MainPage.BASE_URL);
         mainPage.foundSerials();
         searchPage.goToPageWithSerials();
     }
 
     @Test
     public void userAuthorization() {
-     mainPage.openWebSite(BASE_URL);
-    authorizationPage.userSignIn();
+        mainPage.openWebSite(MainPage.BASE_URL);
+        authorizationPage.userSignIn();
     }
 
 }
