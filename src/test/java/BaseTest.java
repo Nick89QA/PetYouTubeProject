@@ -13,8 +13,8 @@ abstract public class BaseTest {
         WebDriverManager.chromedriver().setup();//качаем устанавливаем драйвер
         Configuration.browser = "chrome";//браузер хром
         Configuration.driverManagerEnabled = true;//подтверждение для драйвер менеджера
-        Configuration.browserSize = "1720x1080";//указываем размер окна
-        Configuration.headless = false;//отображение прогона тестов в консоли
+        Configuration.browserSize = "1500x1900";//указываем размер окна
+        Configuration.headless = true;//отображение прогона тестов в консоли
 
     }
 

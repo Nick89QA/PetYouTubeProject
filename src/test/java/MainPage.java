@@ -8,12 +8,16 @@ public class MainPage {
 
     private final SelenideElement searchField = $x("//input[@id='search']");
     private final SelenideElement searchButton = $x("//button[@class='style-scope ytd-searchbox']");
-    private final static String SEARCH_STRING = "Смотреть сериалы";
+    private final static String SEARCH_STRING = "Смотреть сериал Сваты";
 
 
-    public void clickOnSearchField() {
+
+    public void foundSerials() {
         searchField.shouldBe(Condition.enabled).click();
-        searchField.setValue(SEARCH_STRING).pressEnter();
+        searchField.shouldHave(Condition.type("text")).setValue(SEARCH_STRING).pressEnter();
+
+
+
 
     }
 
