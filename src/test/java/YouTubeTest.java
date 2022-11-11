@@ -6,6 +6,7 @@ public class YouTubeTest extends BaseTest {
 
     MainPage mainPage = new MainPage();
     SearchPage searchPage = new SearchPage();
+    AuthorizationPage authorizationPage = new AuthorizationPage();
 
 
     @Test
@@ -13,6 +14,12 @@ public class YouTubeTest extends BaseTest {
         mainPage.openWebSite(BASE_URL);
         mainPage.foundSerials();
         searchPage.goToPageWithSerials();
-        int i = 33;
     }
+
+    @Test
+    public void userAuthorization() {
+     mainPage.openWebSite(BASE_URL);
+    authorizationPage.userSignIn();
+    }
+
 }
