@@ -4,11 +4,13 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class SearchPage {
-    private final SelenideElement HeadOfVideoClip = $x("//*[@href='/watch?v=pTFSPVvbzOs']//*[contains(text(), 'КОМЕДИЯ')]");
-
+    private final SelenideElement headOfVideoClip = $x("//*[@href='/watch?v=pTFSPVvbzOs']//*[contains(text(), 'КОМЕДИЯ')]");
+    private final SelenideElement assertSearchVideoClip = $x("//*[@href='https://www.youtube.com/channel/UCHwjoSkjCHxsHoV2d1mg_Zw']");
 
    public void goToPageWithSerials() {
-       HeadOfVideoClip.shouldHave(Condition.enabled).shouldHave(Condition.text("СВАТЫ")).click();
+       headOfVideoClip.shouldHave(Condition.enabled).shouldHave(Condition.text("СВАТЫ")).click();
+       assertSearchVideoClip.shouldHave(Condition.enabled);
+
    }
 
 
