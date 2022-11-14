@@ -17,14 +17,10 @@ public class AuthorizationPage {
 
     public void userSignIn() {
         signInButton.shouldHave(Condition.enabled).click();
-        fieldEmail.shouldHave(Condition.enabled).setValue(LOGIN);
-        buttonFurther.shouldHave(Condition.text("Далее")).shouldHave(Condition.enabled).click();
-        fieldPassword.shouldHave(Condition.text("Введите пароль")).setValue(PASSWORD);
-        buttonFurther.shouldHave(Condition.text("Далее")).shouldHave(Condition.enabled).click();
+        fieldEmail.shouldHave(Condition.enabled).sendKeys(LOGIN);
+        buttonFurther.shouldBe(Condition.text("Далее")).shouldHave(Condition.enabled).click();
+        fieldPassword.shouldBe(Condition.text("Введите пароль")).setValue(PASSWORD);
+        buttonFurther.shouldBe(Condition.text("Далее")).shouldHave(Condition.enabled).click();
 
-    }
-
-    public void switchWindow(int num){
-        Selenide.switchTo().window(num);
     }
 }
