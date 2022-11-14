@@ -19,6 +19,7 @@ public class YouTubeTest extends BaseTest {
     public void userAuthorization() {
         mainPage.openWebSite(MainPage.BASE_URL);
         authorizationPage.userSignIn();
+
     }
 
 }
