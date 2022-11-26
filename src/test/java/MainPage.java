@@ -17,6 +17,7 @@ public class MainPage {
     private final SelenideElement assertButtonThatThemeIsDark = $x("//div[contains(text(),'Тема: тёмная')]");
     private final SelenideElement buttonBurgerMenu = $x("//button[@id='button' and @aria-label='Гид']");
     private final SelenideElement buttonMain = $x("//span[contains(text(),'Главная')]");
+    private final SelenideElement buttonShorts = $x("//span[contains(text(),'Shorts')]");
 
 
     public void clickOnSearchField() {
@@ -55,7 +56,9 @@ public class MainPage {
 
     public void methodChecksButtonsInBurgerMenu() {
         buttonBurgerMenu.shouldHave(Condition.enabled).click();
-        buttonMain.shouldHave(Condition.enabled).click();
+        buttonMain.shouldHave(Condition.text("Главная")).shouldHave(Condition.enabled).click();
+        buttonShorts.shouldHave(Condition.text("Shorts")).shouldHave(Condition.enabled).click();
+
 
 
     }
