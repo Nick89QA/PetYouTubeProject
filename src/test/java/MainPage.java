@@ -1,8 +1,6 @@
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
-
-import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class MainPage {
@@ -16,9 +14,9 @@ public class MainPage {
     private final SelenideElement buttonThemeDark = $x("//*[@id='endpoint']//*[contains(text(), 'Тёмная')]");
     private final SelenideElement assertButtonThatThemeIsDark = $x("//div[contains(text(),'Тема: тёмная')]");
     private final SelenideElement buttonBurgerMenu = $x("//button[@id='button' and @aria-label='Гид']");
-    private final SelenideElement buttonMain = $x("//span[contains(text(),'Главная')]");
-    private final SelenideElement buttonShorts = $x("//span[contains(text(),'Shorts')]");
-
+    private final SelenideElement buttonMain = $x("//*[@id='endpoint']//span[contains(text(),'Главная')]");
+    private final SelenideElement buttonShorts = $x("//*[@id='endpoint']//span[contains(text(),'Shorts')]");
+    private final SelenideElement buttonSubscribe = $x("//*[@id='endpoint']//span[contains(text(),'Подписки')]");
 
     public void clickOnSearchField() {
         searchField.shouldBe(Condition.enabled).click();
@@ -58,7 +56,7 @@ public class MainPage {
         buttonBurgerMenu.shouldHave(Condition.enabled).click();
         buttonMain.shouldHave(Condition.text("Главная")).shouldHave(Condition.enabled).click();
         buttonShorts.shouldHave(Condition.text("Shorts")).shouldHave(Condition.enabled).click();
-
+        buttonSubscribe.shouldHave(Condition.text("Подписки")).shouldHave(Condition.enabled).click();
 
 
     }
