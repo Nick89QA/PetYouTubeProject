@@ -9,8 +9,8 @@ public class SearchPage {
     private final SelenideElement mainPageLogo = $x("//*[@id='logo']//*[@href='/']");
 
     /**
-     * тест переходит на страницу с роликом,убеждается в том что он на нужном канале
-     * и переходит на главную страницу
+     * The method assert page with video, assert required channel
+     *  and go to the main page
      */
    public void goToPageWithSerials() {
        linkHeadOfVideoClip.shouldHave(Condition.enabled).shouldHave(Condition.text("СВАТЫ")).click();

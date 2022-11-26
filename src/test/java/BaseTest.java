@@ -7,7 +7,7 @@ import org.junit.Before;
 abstract public class BaseTest {
 
     /**
-     * метод setUp настраивает, конфигурирует браузер и уста
+     * метод setUp настраивает, конфигурирует браузер
      */
     public void SetUp() {
         WebDriverManager.chromedriver().setup();//качаем устанавливаем драйвер

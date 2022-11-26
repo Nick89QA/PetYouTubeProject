@@ -12,4 +12,4 @@
        # not automated cases
 
 5. Go to the main page and choose tab "In trends"
-6. 
+6. The method go to the main page and check key tabs
